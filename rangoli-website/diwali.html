@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Diwali Rangoli Designs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<img src="rangoli.png">
+<h1>Reusable Rangoli Designs</h1>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="designs.html">Rangoli Designs</a>
+<a href="tryrangoli.html">Try Rangoli</a>
+<a href="howitworks.html">How It Works</a>
+<a href="about.html">About</a>
+</nav>
+
+</header>
+
+<section class="designs">
+
+<h2>Diwali Rangoli Designs</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="diwali1.png" class="card-img popup-img">
+<h3>Lotus Diya Rangoli</h3>
+</div>
+
+<div class="card">
+<img src="diwali2.png" class="card-img popup-img">
+<h3>Classic Diya Rangoli</h3>
+</div>
+
+<div class="card">
+<img src="diwali3.png" class="card-img popup-img">
+<h3>Festival Diya Pattern</h3>
+</div>
+
+<div class="card">
+<img src="diwali4.png" class="card-img popup-img">
+<h3>Peacock Diya Rangoli</h3>
+</div>
+
+<div class="card">
+<img src="diwali5.png" class="card-img popup-img">
+<h3>Flower Diya Rangoli</h3>
+</div>
+
+<div class="card">
+<img src="diwali6.png" class="card-img popup-img">
+<h3>Elegant Diwali Rangoli</h3>
+</div>
+
+<div class="card">
+<img src="diwali7.png" class="card-img popup-img">
+<h3>Traditional Diwali Rangoli</h3>
+</div>
+
+<div class="card">
+<img src="diwali8.png" class="card-img popup-img">
+<h3>Festival Mandala Rangoli</h3>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Reusable Rangoli Designs | Created by Tanvi</p>
+</footer>
+
+<script>
+
+const images = document.querySelectorAll(".popup-img");
+
+images.forEach(img => {
+img.addEventListener("click", function(){
+
+const popup = document.createElement("div");
+popup.style.position = "fixed";
+popup.style.top = "0";
+popup.style.left = "0";
+popup.style.width = "100%";
+popup.style.height = "100%";
+popup.style.background = "rgba(0,0,0,0.8)";
+popup.style.display = "flex";
+popup.style.alignItems = "center";
+popup.style.justifyContent = "center";
+
+const popupImg = document.createElement("img");
+popupImg.src = this.src;
+popupImg.style.maxWidth = "80%";
+popupImg.style.borderRadius = "10px";
+
+popup.appendChild(popupImg);
+document.body.appendChild(popup);
+
+popup.addEventListener("click", function(){
+popup.remove();
+});
+
+});
+});
+
+</script>
+
+</body>
+</html>

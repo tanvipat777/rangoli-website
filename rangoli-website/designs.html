@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Rangoli Designs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<img src="rangoli.png">
+<h1>Reusable Rangoli Designs</h1>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="designs.html">Rangoli Designs</a>
+<a href="howitworks.html">How It Works</a>
+<a href="about.html">About</a>
+</nav>
+
+</header>
+
+<section class="designs">
+
+<h2>Explore Rangoli Categories</h2>
+
+<div class="filters">
+<button onclick="filterDesign('all')">All</button>
+<button onclick="filterDesign('mandala')">Mandala</button>
+<button onclick="filterDesign('diwali')">Diwali</button>
+<button onclick="filterDesign('festival')">Festival</button>
+</div>
+
+<div class="cards">
+
+<div class="card mandala">
+<a href="mandala.html">
+<img src="mandala1.png" class="card-img">
+<h3>Colorful Mandala</h3>
+</a>
+</div>
+
+<div class="card diwali">
+<a href="diwali.html">
+<img src="diwali1.png" class="card-img">
+<h3>Diwali Special</h3>
+</a>
+</div>
+
+<div class="card festival">
+<a href="festival.html">
+<img src="festival1.png" class="card-img">
+<h3>Festival Rangoli</h3>
+</a>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Reusable Rangoli Designs | Created by Tanvi</p>
+</footer>
+
+<script>
+
+function filterDesign(type){
+
+const cards = document.querySelectorAll(".card");
+const buttons = document.querySelectorAll(".filters button");
+
+buttons.forEach(btn=>{
+btn.classList.remove("active");
+});
+
+event.target.classList.add("active");
+
+cards.forEach(card => {
+
+if(type === "all"){
+card.style.display = "block";
+}
+else if(card.classList.contains(type)){
+card.style.display = "block";
+}
+else{
+card.style.display = "none";
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
