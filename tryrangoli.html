@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Try Rangoli Designer</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.preview{
+text-align:center;
+margin-bottom:30px;
+}
+
+.preview img{
+width:300px;
+border-radius:10px;
+}
+
+.design-grid{
+display:grid;
+grid-template-columns:repeat(6,1fr);
+gap:10px;
+margin:20px;
+}
+
+.design-grid img{
+width:100%;
+cursor:pointer;
+border-radius:8px;
+transition:0.3s;
+}
+
+.design-grid img:hover{
+transform:scale(1.1);
+}
+
+.color-buttons{
+text-align:center;
+margin-top:20px;
+}
+
+.color-buttons button{
+padding:8px 15px;
+margin:5px;
+border:none;
+border-radius:15px;
+cursor:pointer;
+background:#ff7a18;
+color:white;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<img src="rangoli.png">
+<h1>Reusable Rangoli Designs</h1>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="designs.html">Rangoli Designs</a>
+<a href="tryrangoli.html">Try Rangoli</a>
+<a href="howitworks.html">How It Works</a>
+<a href="about.html">About</a>
+</nav>
+
+</header>
+
+<section class="designs">
+
+<h2 style="text-align:center">Try Rangoli Designer</h2>
+
+<div class="preview">
+
+<img id="preview" src="mandala1.png">
+
+<br><br>
+
+<button class="download-btn" onclick="downloadDesign()">Download Design</button>
+
+</div>
+
+<div class="color-buttons">
+
+<button onclick="changeColor('red')">Red</button>
+<button onclick="changeColor('blue')">Blue</button>
+<button onclick="changeColor('yellow')">Yellow</button>
+<button onclick="changeColor('green')">Green</button>
+
+</div>
+
+<h3 style="text-align:center;margin-top:30px;">Choose a Design</h3>
+
+<div class="design-grid">
+
+<img src="mandala1.png" onclick="selectDesign(this)">
+<img src="mandala2.png" onclick="selectDesign(this)">
+<img src="mandala3.png" onclick="selectDesign(this)">
+<img src="mandala4.png" onclick="selectDesign(this)">
+<img src="mandala5.png" onclick="selectDesign(this)">
+<img src="mandala6.png" onclick="selectDesign(this)">
+<img src="mandala7.png" onclick="selectDesign(this)">
+<img src="mandala8.png" onclick="selectDesign(this)">
+
+<img src="diwali1.png" onclick="selectDesign(this)">
+<img src="diwali2.png" onclick="selectDesign(this)">
+<img src="diwali3.png" onclick="selectDesign(this)">
+<img src="diwali4.png" onclick="selectDesign(this)">
+<img src="diwali5.png" onclick="selectDesign(this)">
+<img src="diwali6.png" onclick="selectDesign(this)">
+<img src="diwali7.png" onclick="selectDesign(this)">
+<img src="diwali8.png" onclick="selectDesign(this)">
+
+<img src="festival1.png" onclick="selectDesign(this)">
+<img src="festival2.png" onclick="selectDesign(this)">
+<img src="festival3.png" onclick="selectDesign(this)">
+<img src="festival4.png" onclick="selectDesign(this)">
+<img src="festival5.png" onclick="selectDesign(this)">
+<img src="festival6.png" onclick="selectDesign(this)">
+<img src="festival7.png" onclick="selectDesign(this)">
+<img src="festival8.png" onclick="selectDesign(this)">
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Reusable Rangoli Designs | Created by Tanvi</p>
+</footer>
+
+<script>
+
+function selectDesign(img){
+document.getElementById("preview").src = img.src;
+}
+
+function changeColor(color){
+
+const img = document.getElementById("preview");
+
+if(color === "red"){
+img.style.filter = "hue-rotate(0deg)";
+}
+
+if(color === "blue"){
+img.style.filter = "hue-rotate(180deg)";
+}
+
+if(color === "yellow"){
+img.style.filter = "hue-rotate(60deg)";
+}
+
+if(color === "green"){
+img.style.filter = "hue-rotate(120deg)";
+}
+
+}
+
+function downloadDesign(){
+
+const img = document.getElementById("preview").src;
+
+const link = document.createElement("a");
+link.href = img;
+link.download = img.split("/").pop();
+
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
+
+}
+
+</script>
+
+</body>
+</html>

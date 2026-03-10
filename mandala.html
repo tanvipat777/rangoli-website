@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Mandala Rangoli Designs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+<div class="logo">
+<img src="rangoli.png">
+<h1>Reusable Rangoli Designs</h1>
+</div>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="designs.html">Rangoli Designs</a>
+<a href="tryrangoli.html">Try Rangoli</a>
+<a href="howitworks.html">How It Works</a>
+<a href="about.html">About</a>
+</nav>
+
+</header>
+
+<section class="designs">
+
+<h2>Mandala Rangoli Designs</h2>
+
+<div class="cards">
+
+<div class="card">
+<img src="mandala1.png" class="card-img">
+<h3>Lotus Mandala</h3>
+</div>
+
+<div class="card">
+<img src="mandala2.png" class="card-img">
+<h3>Elegant Mandala</h3>
+</div>
+
+<div class="card">
+<img src="mandala3.png" class="card-img">
+<h3>Symmetry Mandala</h3>
+</div>
+
+<div class="card">
+<img src="mandala4.png" class="card-img">
+<h3>Classic Mandala</h3>
+</div>
+
+<div class="card">
+<img src="mandala5.png" class="card-img">
+<h3>flowy Mandala</h3>
+</div>
+
+<div class="card">
+<img src="mandala6.png" class="card-img">
+<h3>petals Mandala</h3>
+</div>
+
+<div class="card">
+<img src="mandala7.png" class="card-img">
+<h3>marigold Mandala</h3>
+</div>
+
+<div class="card">
+<img src="mandala8.png" class="card-img">
+<h3>daisy Mandala</h3>
+</div>
+
+</div>
+
+</section>
+
+<footer>
+<p>© 2026 Reusable Rangoli Designs | Created by Tanvi</p>
+</footer>
+
+<div id="popup" class="popup">
+<img id="popup-img">
+</div>
+
+<script>
+const images = document.querySelectorAll(".card-img");
+const popup = document.getElementById("popup");
+const popupImg = document.getElementById("popup-img");
+
+images.forEach(img => {
+img.addEventListener("click", () => {
+popup.style.display = "flex";
+popupImg.src = img.src;
+});
+});
+
+popup.addEventListener("click", () => {
+popup.style.display = "none";
+});
+</script>
+
+</body>
+</html>
