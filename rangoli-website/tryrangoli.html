@@ -191,9 +191,8 @@ img.style.filter = "brightness(0.3)";
 }
 
 function pickColor(color){
-let img = document.getElementById("preview");
-img.style.filter = "none";
-img.style.backgroundColor = color;
+const img = document.getElementById("preview");
+img.style.filter = "drop-shadow(0px 0px 30px " + color + ")";
 }
 
 function downloadDesign(){
@@ -215,5 +214,6 @@ document.body.removeChild(link);
 </body>
 
 </html>
+
 
 
