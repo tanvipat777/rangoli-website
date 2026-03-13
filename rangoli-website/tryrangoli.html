@@ -99,6 +99,8 @@ color:white;
 <button onclick="changeColor('brown')">Brown</button>
 <button onclick="changeColor('black')">Black</button>
 
+<input type="color" id="colorPicker" onchange="pickColor(this.value)">
+
 </div>
 
 <h3 style="text-align:center;margin-top:30px;">Choose a Design</h3>
@@ -188,6 +190,12 @@ img.style.filter = "brightness(0.3)";
 
 }
 
+function pickColor(color){
+let img = document.getElementById("preview");
+img.style.filter = "none";
+img.style.backgroundColor = color;
+}
+
 function downloadDesign(){
 
 const img = document.getElementById("preview").src;
@@ -207,4 +215,5 @@ document.body.removeChild(link);
 </body>
 
 </html>
+
 
